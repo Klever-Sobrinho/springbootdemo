@@ -1,4 +1,4 @@
-package br.com.osf.springboot.demo.springboot;
+package com.springboot.demo.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class IndexController {
 	
-	@RequestMapping
+	@RequestMapping("/")
 	public String index() {
 		return "index";
 	}
