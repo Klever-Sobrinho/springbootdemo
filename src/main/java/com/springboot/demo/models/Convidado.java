@@ -8,6 +8,8 @@ import javax.persistence.ManyToOne;
 public class Convidado {
 	
 	@Id
+	private long codigo;
+	
 	private String rg;
 	private String nomeConvidado;
 	
