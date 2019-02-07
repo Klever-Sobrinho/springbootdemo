@@ -1,8 +1,6 @@
 package com.springboot.demo.models;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotEmpty;
@@ -11,11 +9,7 @@ import javax.validation.constraints.NotEmpty;
 public class Convidado {
 	
 	@Id
-	@GeneratedValue(strategy= GenerationType.AUTO)
-	private long codigo;
-	
-	@NotEmpty
-	private String rg;
+	private long rg;
 	
 	@NotEmpty
 	private String nomeConvidado;
@@ -23,19 +17,11 @@ public class Convidado {
 	@ManyToOne
 	private Evento evento;
 
-	public long getCodigo() {
-		return codigo;
-	}
-
-	public void setCodigo(long codigo) {
-		this.codigo = codigo;
-	}
-
-	public String getRg() {
+	public long getRg() {
 		return rg;
 	}
 
-	public void setRg(String rg) {
+	public void setRg(long rg) {
 		this.rg = rg;
 	}
 
