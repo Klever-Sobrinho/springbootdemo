@@ -7,5 +7,5 @@ import com.springboot.demo.models.Evento;
 
 public interface ConvidadoRepository extends CrudRepository<Convidado, String>{
 	Iterable<Convidado> findByEvento(Evento evento);
-	Convidado findByCodigo(long codigo);
+	Convidado findByRg(long rg);
 }
